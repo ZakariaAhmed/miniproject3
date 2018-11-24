@@ -13,6 +13,7 @@ function addUser(firstName, lastName, userName, password, email) {
 
   function findByUsername(username) {
     var user = User.findOne({userName: username}).exec();
+    
     return user;
   }
     

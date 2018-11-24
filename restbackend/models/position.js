@@ -11,7 +11,8 @@ var PositionSchema = new Schema({
  'type': { type: String, enum: "Point", default: "Point" },
  coordinates: { type: [Number] }
  }
-})
+});
+
 PositionSchema.index({ loc: "2dsphere" },{ "background": true });
 
 module.exports = mongoose.model("Position",PositionSchema);
