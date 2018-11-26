@@ -8,9 +8,9 @@ const addUserPosition = (user_id, created, longitude, latitude) => {
         created:created,
         loc:{
             type:'Point',
-            coordinates:[longitude, longitude]
-        }
-    }
+            coordinates:[longitude, latitude]
+        } 
+    };
     const position = new Position(userPosition);
     position.save();
 }
@@ -20,10 +20,19 @@ const findPositionByUserId = async (id) => {
     return position;
 }
 
+const updateUserPosition = async (userId, longitude, latitude) => {
+
+    let position = await Position.updateOne({user:userId}, {loc: {type:'Point', coordinates:{longitude, latitude}}});
+    console.log('updated position');
+    console.log(position);
+    return position;
+};
+
 
 module.exports = {
     addUserPosition:addUserPosition,
-    findPositionByUserId:findPositionByUserId
+    findPositionByUserId:findPositionByUserId,
+    updateUserPosition:updateUserPosition
 };
 
 

@@ -8,9 +8,9 @@ var JobSchema = new Schema({
   });
 
   var UserSchema = new Schema({
-    userName: {type: String, unique: true, required: true},
-    firstName : String,
-    lastName : String,
+    username: {type: String, unique: true, required: true},
+    firstname : String,
+    lastname : String,
     password : {type: String, required: true},
     email: {type: String, required: true},
     //Observe embedding

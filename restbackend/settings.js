@@ -1,6 +1,6 @@
 // database settings
 
-const DEV_DB_URI = "mongodb://localhost:27017/userdb";
+const DEV_DB_URI = "mongodb://localhost:27017/userDatabase";
 const TEST_DB_URI = "mongodb://localhost:27017/testUserDatabase";
 const MOCHA_TEST_TIMEOUT = 5000;
 

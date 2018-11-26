@@ -20,14 +20,14 @@ async function find_nearby_friends(position, dist){
                 }
             }
         }
-    ).populate('user', {userName: 1, _id: 0}).exec()
+    ).populate('user', {username: 1, _id: 0}).exec()
 
   console.log(friendsPositions);
     return friendsPositions;
 }
 
 async function login(username, password, latitude, longitude, distance){
-    var user = await User.findOne({userName: username}).exec();
+    var user = await User.findOne({username: username}).exec();
     
     // Check to see if we got any user / should throw error, didnt get time to make exceptions
     if (user==null) {

@@ -5,14 +5,14 @@ function getAllUsers(){
     return User.find({}).exec();
 }
 
-function addUser(firstName, lastName, userName, password, email) {
-    var userDetail = { firstName, lastName, userName, email, password};
+function addUser(firstname, lastname, username, password, email) {
+    var userDetail = { firstname, lastname, username, email, password};
     var user = new User(userDetail);
     return user.save();
   }
 
   function findByUsername(username) {
-    var user = User.findOne({userName: username}).exec();
+    var user = User.findOne({username: username}).exec();
     
     return user;
   }

@@ -24,7 +24,7 @@ it("Should find all 2 users created in makeTestData", async function(){
 
 it("Should find user (Zakaria)", async function(){
     var user = await userFacade.findByUsername("za37");
-    expect(user.userName).to.be.equal("za37");
+    expect(user.username).to.be.equal("za37");
 });
 
 

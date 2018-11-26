@@ -9,12 +9,17 @@ var loginFacade = require('../../facades/loginFacade');
 // })
 
 
+
+// Login
 loginRouter.post('/', async function (req, res, next) { 
      const {username, password, longitude, latitude, distance} = req.body
      const user  = await loginFacade.login(username, password, longitude, latitude, distance);
 
      return res.json(user);
  });
+
+
+
 
 
 

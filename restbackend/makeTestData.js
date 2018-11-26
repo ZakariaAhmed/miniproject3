@@ -13,9 +13,9 @@ async function initTestDb(){
 initTestDb();
 
 //Utility Function to create users
-function userCreate(firstName, lastName, userName, password, email, type, company, companyUrl) {
+function userCreate(firstname, lastname, username, password, email, type, company, companyUrl) {
     var job = [{ type, company, companyUrl }, { type, company, companyUrl }];
-    var userDetail = { firstName, lastName, userName, email, password, job };
+    var userDetail = { firstname, lastname, username, email, password, job };
     var user = new User(userDetail);
     return user.save();
   }

@@ -28,7 +28,8 @@ describe('API Login Testing', function(){
         let response = await loginFacade.login("za37", "abc123", 12.12, 11.11, 5000);
         const user = await userFacade.findByUsername("za37");
         const position = await positionFacade.findPositionByUserId(user._id);
-        
+        console.log(response);
+        console.log(user);
         expect(position.loc.coordinates[0]).to.be.equal(11.11);
     });
 

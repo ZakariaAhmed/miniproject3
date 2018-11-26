@@ -2,7 +2,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require("./dbSetup.js")();
+var dbSetup = require('./dbSetup');
+var TEST_DB_URI = require("./settings").TEST_DB_URI;
+var DB_URI = require('./settings').DEV_DB_URI;
+async function initTestDb(){
+    await dbSetup.connect(TEST_DB_URI);
+}
+initTestDb();
+
 var indexRouter = require('./routes/views/indexController');
 var apiRouter = require('./routes/api/apiController');
 
