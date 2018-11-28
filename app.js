@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dbSetup = require('./dbSetup');
-var TEST_DB_URI = require("./settings").TEST_DB_URI;
+var TEST_DB_URI = require("./settings").MLAB_URI;
 var DB_URI = require('./settings').DEV_DB_URI;
 
 async function initTestDb(){
