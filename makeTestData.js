@@ -1,6 +1,6 @@
 const expect = require("chai").expect;
 const dbSetup = require('./dbSetup')
-var TEST_DB_URI = require("./settings").MLAB_URI;
+var TEST_DB_URI = require("./settings").TEST_DB_URI;
 var User = require("./models/user.js");
 var LocationBlog = require('./models/locationBlog.js');
 var Position = require('./models/position.js');
